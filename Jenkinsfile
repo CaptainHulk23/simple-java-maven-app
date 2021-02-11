@@ -16,8 +16,8 @@ pipeline {
         stage('Deliver') {
             steps {
                 echo "delivered"
-                echo ${WORKSPACE}
-                echo ${PWD}
+                echo "${WORKSPACE}"
+                echo "${PWD}"
             }
         }
     }
