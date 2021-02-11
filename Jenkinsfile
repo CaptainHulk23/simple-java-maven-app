@@ -30,7 +30,7 @@ pipeline {
                 sh 'sudo cp ${WORKSPACE}/target/*.jar .'
                 
                 echo 'Building the Docker image... '         
-                sh 'sudo docker build -t $IMAGE_REPO_NAME .'
+                sh 'sudo docker build .'
                 sh 'sudo docker tag $IMAGE_REPO_NAME:$IMAGE_TAG $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG'
               
                               
