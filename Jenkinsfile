@@ -17,8 +17,8 @@ pipeline {
             steps {
                 echo "delivered"
                 echo "${WORKSPACE}"
-                sh 'sudo cp ${WORKSPACE}/target/*.jar /home/ec2-user/app1/appartifact/'
-
+                sh 'sudo cp ${WORKSPACE}/target/*.jar /home/ec2-user/app1/simple-java-maven-app'
+                sh 'docker build . -t ${BUILD_NUMBER}'
                 echo "${PWD}"
             }
         }
