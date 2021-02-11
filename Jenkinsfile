@@ -25,8 +25,7 @@ pipeline {
             steps {
                 // echo "delivered"
                 // echo "${WORKSPACE}"
-                sh 'sudo /usr/bin/aws  ecr get-login-password --region $AWS_DEFAULT_REGION'
-                sh 'sudo docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com'
+                sh 'sudo /usr/bin/aws  ecr get-login-password --region $AWS_DEFAULT_REGION | sudo docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com'
                 sh 'sudo cp ${WORKSPACE}/target/*.jar /home/ec2-user/app1/simple-java-maven-app'
                 sh 'sudo cp ${WORKSPACE}/target/*.jar .'
                 
