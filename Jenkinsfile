@@ -17,7 +17,7 @@ pipeline {
             steps {
                 echo "delivered"
                 echo "${WORKSPACE}"
-                sh 'cp ${WORKSPACE}/target/*.jar /home/ec2-user/app1/appartifact/'
+                sh 'sudo cp ${WORKSPACE}/target/*.jar /home/ec2-user/app1/appartifact/'
 
                 echo "${PWD}"
             }
