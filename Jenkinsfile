@@ -10,13 +10,13 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                //sh 'mvn -B -DskipTests clean package' 
+                sh 'mvn -B -DskipTests clean package' 
                 echo 'starting'
             }
         }
         stage('Test') {
             steps {
-                //sh 'mvn test'
+                sh 'mvn test'
                    echo 'starting'
             }
             
