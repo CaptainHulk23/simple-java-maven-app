@@ -1,10 +1,10 @@
 pipeline {
     agent any
     environment {
-        $AWS_DEFAULT_REGION  = 'us-east-1'
-        $AWS_ACCOUNT_ID    = '897465669670'
-        $IMAGE_TAG ='${BUILD_NUMBER}'
-        $IMAGE_REPO_NAME='infinitywar'
+        AWS_DEFAULT_REGION  = 'us-east-1'
+        AWS_ACCOUNT_ID    = '897465669670'
+        IMAGE_TAG ='${BUILD_NUMBER}'
+        IMAGE_REPO_NAME='infinitywar'
         
     }
     stages {
